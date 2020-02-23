@@ -9,7 +9,7 @@ the wolf will eat the goat. If the goat and the cabbage are
 alone on the shore, the goat will eat the cabbage.
 """
 
-from search import Problem, breadth_first_search
+from search import Problem, breadth_first_graph_search
 #from collections import namedtuple
 #State = namedtuple("State", ["farmer/boat", "wolf", "goat", "cabbage"])
 class Farmer(Problem):
@@ -57,4 +57,4 @@ class Farmer(Problem):
 
 if __name__ == "__main__":
     f = Farmer()
-    print(breadth_first_search(f).solution())
+    print(breadth_first_graph_search(f).solution())

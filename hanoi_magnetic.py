@@ -11,7 +11,7 @@ entire stack to another rod, obeying the following simple rules:
   magnets in each disk prevent this illegal move.
 * Each disk must be flipped as it is moved."""
 
-from search import Problem, breadth_first_search
+from search import Problem, breadth_first_graph_search
 from collections import namedtuple
 State = namedtuple("State", ["frm", "to"])
 
@@ -71,4 +71,4 @@ class Hanoi(Problem):
 
 if __name__ == "__main__":
     hanoi = Hanoi(4)
-    print(breadth_first_search(hanoi).solution())
+    print(breadth_first_graph_search(hanoi).solution())

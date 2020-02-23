@@ -11,7 +11,7 @@ two monochrome towers on the first two rods obeying the following simple rules:
 * No disk may be placed on top of a smaller disk.
 """
 
-from search import Problem, breadth_first_search
+from search import Problem, breadth_first_graph_search
 from collections import namedtuple
 State = namedtuple("State", ["frm", "to"])
 
@@ -63,4 +63,4 @@ class Hanoi(Problem):
 
 if __name__ == "__main__":
     hanoi = Hanoi(3)
-    print(breadth_first_search(hanoi).solution())
+    print(breadth_first_graph_search(hanoi).solution())

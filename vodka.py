@@ -5,7 +5,7 @@ You need to equally distribute 12 liters of vodka in a bucket between two
 Russian peasants. They have two bottles with capacity of 8 and 5 liters.
 """
 
-from search import Problem, breadth_first_search
+from search import Problem, breadth_first_graph_search
 
 class Vodka(Problem):
     "Turn glasses"
@@ -58,4 +58,4 @@ class Vodka(Problem):
 
 if __name__ == "__main__":
     v = Vodka()
-    print(breadth_first_search(v).solution())
+    print(breadth_first_graph_search(v).solution())

@@ -6,7 +6,7 @@ In one step any k of the glasses need to be turned over.
 Our aim is to reach the state in which all glasses are standing downright.
 """
 
-from search import Problem, breadth_first_search
+from search import Problem, breadth_first_graph_search
 from itertools import combinations
 
 
@@ -34,4 +34,4 @@ class Glasses(Problem):
 
 if __name__ == "__main__":
     g = Glasses(6,2)
-    print(breadth_first_search(g).solution())
+    print(breadth_first_graph_search(g).solution())

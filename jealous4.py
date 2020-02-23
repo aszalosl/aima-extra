@@ -8,7 +8,7 @@ by itself with no people on board. There is an island in the middle of the
 river where the boat may land and leave some of its cargo.
 """
 
-from search import Problem, breadth_first_search
+from search import Problem, breadth_first_graph_search
 
 LEFT =   0
 ISLAND = 1
@@ -118,4 +118,4 @@ class Jealous4(Problem):
 
 if __name__ == "__main__":
     j = Jealous4()
-    print(breadth_first_search(j).solution())
+    print(breadth_first_graph_search(j).solution())

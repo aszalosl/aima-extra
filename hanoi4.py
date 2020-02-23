@@ -7,7 +7,7 @@ the entire stack to another rod, obeying the following simple rules:
   of another stack i.e. a disk can only be moved if it is the uppermost disk on a stack.
 * No disk may be placed on top of a smaller disk."""
 
-from search import Problem, breadth_first_search
+from search import Problem, breadth_first_graph_search
 from collections import namedtuple
 State=namedtuple("S", ["disk","rod"])
 
@@ -64,4 +64,4 @@ class Hanoi(Problem):
 
 if __name__ == "__main__":
     hanoi = Hanoi(4)
-    print(breadth_first_search(hanoi).solution())
+    print(breadth_first_graph_search(hanoi).solution())

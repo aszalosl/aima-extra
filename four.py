@@ -2,7 +2,7 @@
 numbers 0 or 4 to the end of the actual number, or if the number is even,
 we can divide it by 2."""
 
-from search import Problem, breadth_first_search
+from search import Problem, breadth_first_graph_search
 class Four(Problem):
     """game four"""
 
@@ -31,4 +31,4 @@ class Four(Problem):
 
 if __name__ == "__main__":
     negy = Four(160)
-    print(breadth_first_search(negy).solution())
+    print(breadth_first_graph_search(negy).solution())

@@ -8,7 +8,7 @@ The boat cannot cross the river by itself with no people on board.
 """
 
 
-from search import Problem, breadth_first_search
+from search import Problem, breadth_first_graph_search
 
 def safe_set(s):
     if s & set(['A','B','C', 'D', 'E']) == set():
@@ -108,4 +108,4 @@ class Jealous5(Problem):
 
 if __name__ == "__main__":
     j = Jealous5()
-    print(breadth_first_search(j).solution())
+    print(breadth_first_graph_search(j).solution())

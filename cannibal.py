@@ -8,7 +8,7 @@ they cannot be outnumbered by cannibals (if they were, the
 cannibals would eat the missionaries).
 The boat cannot cross the river by itself with no people on board."""
 
-from search import Problem, breadth_first_search
+from search import Problem, breadth_first_graph_search
 from collections import namedtuple
 State = namedtuple("State", ["ml", "cl", "boat_on_left", "mr", "cr"])
 
@@ -69,15 +69,15 @@ class Cannibal(Problem):
 
 if __name__ == "__main__":
     c3 = Cannibal(3)
-    print(breadth_first_search(c3).solution())
+    print(breadth_first_graph_search(c3).solution())
     c4 = Cannibal(4)
-    s4 = breadth_first_search(c4)
+    s4 = breadth_first_graph_search(c4)
     if s4: 
         print(s4.solution())
     else:
         print("No solution for n=4")  
     c5 = Cannibal(5)
-    s5 = breadth_first_search(c5)
+    s5 = breadth_first_graph_search(c5)
     if s5: 
         print(s5.solution())
     else:

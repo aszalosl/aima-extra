@@ -10,7 +10,7 @@ obeying the following simple rules:
   of another stack i.e. a disk can only be moved if it is the uppermost disk on a stack.
 * No disk may be placed on top of a smaller disk."""
 
-from search import Problem, breadth_first_search
+from search import Problem, breadth_first_graph_search
 from collections import namedtuple
 State = namedtuple("State", ["frm", "to"])
 
@@ -61,4 +61,4 @@ class Hanoi(Problem):
 
 if __name__ == "__main__":
     hanoi = Hanoi(2)
-    print(breadth_first_search(hanoi).solution())
+    print(breadth_first_graph_search(hanoi).solution())
